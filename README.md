@@ -1,5 +1,5 @@
 # A3-PROJETO-JAVA
-Projeto A3 de Java da universidade Anhembi morumbi!
+Projeto A3 de Java da universidade Anhembi Morumbi!
 
 ## 📚 Documentação
 
