@@ -8,8 +8,8 @@ public class Esfihas extends PrincipalProdutos {
     public Esfihas() {
     }
 
-    public Esfihas(int id, String nome, String descricao, String adicional, double valor, boolean combo, String sabor) {
-        super(id, nome, descricao, adicional, valor, combo);
+    public Esfihas( String nome, String descricao, String adicional, double valor, boolean combo, String sabor) {
+        super(nome, descricao, adicional, valor, combo);
         this.sabor = sabor;
     }
 

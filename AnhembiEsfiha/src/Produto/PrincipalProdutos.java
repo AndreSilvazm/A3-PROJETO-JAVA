@@ -2,7 +2,7 @@
 package Produto;
 
 public class PrincipalProdutos {
-     private int id;
+    private int id;
     private String descricao, nome, adicional;
     private double valor;
     private boolean combo;
@@ -11,8 +11,8 @@ public class PrincipalProdutos {
 
     }
 
-    public PrincipalProdutos(int id, String nome, String descricao, String adicional, double valor, boolean combo) {
-        this.id = id;
+    public PrincipalProdutos( String nome, String descricao, String adicional, double valor, boolean combo) {
+        this.id =+ 1;
         this.nome = nome;
         this.descricao = descricao;
         this.adicional = adicional;
@@ -39,6 +39,7 @@ public class PrincipalProdutos {
     public String getNome() {
         return nome;
     }
+
 
     public void setNome(String nome) {
         this.nome = nome;
