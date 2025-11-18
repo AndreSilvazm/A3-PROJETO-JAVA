@@ -8,8 +8,8 @@ public class Esfihas extends PrincipalProdutos {
     public Esfihas() {
     }
 
-    public Esfihas(int id, String nome, String descricao, String adicional, double valor, boolean combo, String sabor) {
-        super(id, nome, descricao, adicional, valor, combo);
+    public Esfihas(int quantidade, String nome, String descricao, String adicional, double preco, boolean combo, String sabor) {
+        super(quantidade, nome, descricao, adicional, preco, combo);
         this.sabor = sabor;
     }
 
@@ -20,4 +20,5 @@ public class Esfihas extends PrincipalProdutos {
     public void setSabor(String sabor) {
         this.sabor = sabor;
     }
+  
 }

@@ -8,8 +8,8 @@ public class Bebidas extends PrincipalProdutos {
 
     }
 
-    public Bebidas(int id, String nome, String descricao, String adicional, double valor, boolean combo, String categoria) {
-        super(id, nome, descricao, adicional, valor, combo);
+    public Bebidas(int quantidade, String nome, String descricao, String adicional, double preco, boolean combo, String categoria) {
+        super(quantidade, nome, descricao, adicional, preco, combo);
         this.categoria = categoria;
     }
 

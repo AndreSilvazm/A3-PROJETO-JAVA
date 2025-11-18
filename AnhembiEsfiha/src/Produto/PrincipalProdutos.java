@@ -1,31 +1,32 @@
-
 package Produto;
 
 public class PrincipalProdutos {
-     private int id;
+
+    private int id, quantidade;
     private String descricao, nome, adicional;
-    private double valor;
+    private double preco;
     private boolean combo;
+    private int valor = 1;
 
     public PrincipalProdutos() {
-
+        this.id = valor;
+        valor++;
     }
 
-    public PrincipalProdutos(int id, String nome, String descricao, String adicional, double valor, boolean combo) {
-        this.id = id;
+    public PrincipalProdutos(int quantidade, String nome, String descricao, String adicional, double preco, boolean combo) {
+        this.quantidade = quantidade;
         this.nome = nome;
         this.descricao = descricao;
         this.adicional = adicional;
-        this.valor = valor;
+        this.preco = preço;
         this.combo = combo;
+        this.id = valor;
+        valor++;
+
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getDescricao() {
@@ -52,12 +53,12 @@ public class PrincipalProdutos {
         this.adicional = adicional;
     }
 
-    public double getValor() {
-        return valor;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setPreco(double preço) {
+        this.preco = preço;
     }
 
     public boolean isCombo() {
@@ -68,5 +69,20 @@ public class PrincipalProdutos {
         this.combo = combo;
     }
 
-}
+    public int getValor() {
+        return valor;
+    }
 
+    public void setValor(int valor) {
+        this.valor = valor;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+}
