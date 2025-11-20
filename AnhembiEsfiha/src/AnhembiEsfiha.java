@@ -17,7 +17,6 @@ public class AnhembiEsfiha {
         while (contador < 5) {
             contador++;
             PrincipalProdutos Produto1 = new Esfihas("André", "De carne", "Fritas", 20.0, true, "Carne" );
-            Produto1.setId(contador);
             Lista.Inserir(Produto1);
         }
 

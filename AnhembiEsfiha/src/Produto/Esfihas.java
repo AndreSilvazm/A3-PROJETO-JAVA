@@ -3,7 +3,7 @@ package Produto;
 
 
 public class Esfihas extends PrincipalProdutos {
-      private String sabor;
+    private String sabor;
 
     public Esfihas() {
     }
