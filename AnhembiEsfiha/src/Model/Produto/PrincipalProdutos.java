@@ -1,4 +1,4 @@
-package Produto;
+package Model.Produto;
 
 public abstract class PrincipalProdutos {
 

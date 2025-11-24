@@ -1,27 +1,15 @@
 
 import Arrays.Array;
-import Produto.Esfihas;
-import Produto.PrincipalProdutos;
-
-import java.util.ArrayList;
+import Model.Produto.Esfihas;
+import Model.Produto.PrincipalProdutos;
 
 public class AnhembiEsfiha {
 
     public static void main(String[] args) {
         System.out.println("Programa AnhembiEsfiha iniciado!");
+        System.out.println("Lista de produtos!");
 
-        Array Lista = new Array(3);
-
-        int contador = 0;
-
-        while (contador < 5) {
-            contador++;
-            PrincipalProdutos Produto1 = new Esfihas("André", "De carne", "Fritas", 20.0, true, "Carne" );
-            Lista.Inserir(Produto1);
-        }
-
-        Lista.Exibir();
-        System.out.println(Lista.RemoverPorID(Lista.PegarIndexPeloID(2)));
-        Lista.Exibir();
+        System.out.println("[1] Fazer pedido");
+        System.out.println("[2] Entrar como fucnionario");
     }
 }

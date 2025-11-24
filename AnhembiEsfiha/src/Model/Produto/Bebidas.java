@@ -1,4 +1,4 @@
-package Produto;
+package Model.Produto;
 
 public class Bebidas extends PrincipalProdutos {
     private String categoria;

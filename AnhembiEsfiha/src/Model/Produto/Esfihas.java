@@ -1,5 +1,5 @@
 
-package Produto;
+package Model.Produto;
 
 
 public class Esfihas extends PrincipalProdutos {

@@ -1,6 +1,6 @@
 package Arrays;
 
-import Produto.PrincipalProdutos;
+import Model.Produto.PrincipalProdutos;
 
 public class Array implements Arrays {
     private PrincipalProdutos[] lista;
