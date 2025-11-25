@@ -24,7 +24,7 @@ public class CRMmanager {
     public void MostrarMenuInicial() {
         System.out.println("Menu Inicial");
         System.out.println("[1]Cadastrar Produto");
-        System.out.println("[2]Sair");
+        System.out.println("[2]Cadastrar Pedido");
         this.opcao = scann.nextInt();
     }
 
