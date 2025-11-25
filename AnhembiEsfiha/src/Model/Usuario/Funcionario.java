@@ -4,10 +4,12 @@ import Arrays.Array;
 import Model.Produto.PrincipalProdutos;
 
 public class Funcionario extends Usuario {
+
     private double salario;
     private int permission;
 
     Array ListaProdutos = new Array(3);
+
     public Funcionario() {
     }
 
@@ -15,7 +17,6 @@ public class Funcionario extends Usuario {
         this.salario = salario;
         this.permission = permission;
     }
-
     public double getSalario() {
         return salario;
     }
@@ -33,16 +34,26 @@ public class Funcionario extends Usuario {
     }
     //EXIBIR PRODUTOS
 
-    public void CadastrarProduto(PrincipalProdutos Produto){
+    public void CadastrarProduto(PrincipalProdutos Produto) {
         ListaProdutos.Inserir(Produto);
     }
 
-    public boolean DeletarProdutoPeloID(int Id){
+    public boolean DeletarProdutoPeloID(int Id) {
         return ListaProdutos.RemoverPorID(Id);
     }
 
-    public void ExibirProdutos(){
-         ListaProdutos.Exibir();
+    public void ExibirProdutos() {
+        ListaProdutos.Exibir();
     }
 
+    public void Login(String username, String senha) {
+        System.out.println(username);
+        System.out.println(senha);
+        if (senha.equals("admin") && username.equals("admin")) {
+            System.out.println("Permissão de admin logada");
+            this.permission = 1;
+        } else {
+            System.out.println("Acesso Negado");
+        }
+    }
 }
