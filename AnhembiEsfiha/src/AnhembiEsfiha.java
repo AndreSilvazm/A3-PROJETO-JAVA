@@ -1,15 +1,24 @@
 
 import Arrays.Array;
-import Model.Produto.Esfihas;
-import Model.Produto.PrincipalProdutos;
+import CRM.CRMmanager;
+
 
 public class AnhembiEsfiha {
 
     public static void main(String[] args) {
-        System.out.println("Programa AnhembiEsfiha iniciado!");
-        System.out.println("Lista de produtos!");
+        CRMmanager CRMmanager = new CRMmanager();
 
-        System.out.println("[1] Fazer pedido");
-        System.out.println("[2] Entrar como fucnionario");
+        //AQUI ELE MOSTRA O MENU INICIAL ANTES DE ENTRAR NO SWITCH
+        CRMmanager.MostrarMenuInicial();
+
+        //SWITCH PARA TRATAR OS DADOS QUE FORAM PREENCHIDSO NO MENU INICAL
+        switch(CRMmanager.getOpcao()){
+            case 1:
+                CRMmanager.CadastrarProduto();
+                CRMmanager.MostrarProdutos();
+            default:
+                break;
+        }
+
     }
 }
