@@ -1,4 +1,3 @@
-
 import Arrays.Array;
 import CRM.CRMmanager;
 
@@ -14,11 +13,19 @@ public class AnhembiEsfiha {
         //SWITCH PARA TRATAR OS DADOS QUE FORAM PREENCHIDSO NO MENU INICAL
         switch(CRMmanager.getOpcao()){
             case 1:
+                CRMmanager.FazerLogin();
+                CRMmanager.MostrarMenuInicial();
+
+            case 2:
                 CRMmanager.CadastrarProduto();
                 CRMmanager.MostrarProdutos();
+                CRMmanager.DeletarProduto();
+                CRMmanager.MostrarProdutos();
+                break;
             default:
                 break;
         }
 
     }
+
 }
