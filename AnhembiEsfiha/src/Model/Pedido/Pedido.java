@@ -1,18 +1,48 @@
 package Model.Pedido;
 
 public class Pedido {
-    private int ID;
-    private int funcionario_id;
-    private String funcionario_nome;
-    private int cliente_id;
-    private String cliente_nome;
-    private String cliente_username;
-    private String cliente_sobrenome;
-    private String cliente_endereco_id;
-    private double valor;
-    private double valor_frete;
-    private double valor_total;
+    private int IdPedido;
+    private String clienteNome;
+    private static int valor = 1;
+    private double valorTotal;
 
-    public Pedido() {}
+    public Pedido() {
+    this.IdPedido = valor++;
+        
+    }
+
+    public Pedido(int IdPedido, String clienteNome, double valorTotal) {
+        this.IdPedido = valor++;
+        this.clienteNome = clienteNome;
+        this.valorTotal = valorTotal;
+    }
+
+    public String getClienteNome() {
+        return clienteNome;
+    }
+
+    public void setClienteNome(String clienteNome) {
+        this.clienteNome = clienteNome;
+    }
+
+    public static int getValor() {
+        return valor;
+    }
+
+    public static void setValor(int valor) {
+        Pedido.valor = valor;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public int getIdPedido() {
+        return IdPedido;
+    }
 
 }
