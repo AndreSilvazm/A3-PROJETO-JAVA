@@ -5,7 +5,7 @@ import Model.Produto.Bebidas;
 
 public class ArrayBebidas implements InterfaceArrayBebidas {
 
- private Bebidas[] lista;
+    private Bebidas[] lista;
     private int contador;
     private Bebidas[] NovoArray;
     private int tamanho;
@@ -21,7 +21,7 @@ public class ArrayBebidas implements InterfaceArrayBebidas {
 
         //ANTES DE QUALQUER NOVA INTERAÇÃO VERIFICAR SE O ARRAY ESTÁ CHEIO;
 
-        if(VerificaSeOArrayEstaCheio()) {
+        if (VerificaSeOArrayEstaCheio()) {
             System.out.println("Aumentando Tamanho da Lista");
             this.lista = this.NovoArray();
         }
@@ -37,8 +37,8 @@ public class ArrayBebidas implements InterfaceArrayBebidas {
     @Override
     public void Exibir() {
         for (int i = 0; i < contador; i++) {
-            System.out.println(lista[i].getCategoria());
             System.out.println(lista[i].getDescricao());
+            System.out.println(lista[i].getId());
             System.out.println(lista[i].getPreco());
 
         }
@@ -53,13 +53,13 @@ public class ArrayBebidas implements InterfaceArrayBebidas {
         return NovoArray;
     }
 
-    private boolean VerificaSeOArrayEstaCheio(){
+    private boolean VerificaSeOArrayEstaCheio() {
         return this.contador == lista.length;
     }
 
-    public int PegarIndexPeloID(int id){
+    public int PegarIndexPeloID(int id) {
         for (int i = 0; i < contador; i++) {
-            if(lista[i].getId()== id){
+            if (lista[i].getId() == id) {
                 return i;
             }
         }
@@ -89,5 +89,10 @@ public class ArrayBebidas implements InterfaceArrayBebidas {
         return true;
     }
 
-    
+    public Bebidas PegarDadosBebidaPeloID(int id) {
+        int index = PegarIndexPeloID(id);
+        return lista[index];
+    }
+
+
 }

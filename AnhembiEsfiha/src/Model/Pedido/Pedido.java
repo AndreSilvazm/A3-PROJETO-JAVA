@@ -2,6 +2,8 @@ package Model.Pedido;
 
 public class Pedido {
     private int IdPedido;
+    private int IdEsfiha;
+    private int IdBebida;
     private String clienteNome;
     private static int valor = 1;
     private double valorTotal;
@@ -11,7 +13,7 @@ public class Pedido {
         
     }
 
-    public Pedido(int IdPedido, String clienteNome, double valorTotal) {
+    public Pedido(String clienteNome, double valorTotal, int IdEsfiha, int IdBebida) {
         this.IdPedido = valor++;
         this.clienteNome = clienteNome;
         this.valorTotal = valorTotal;

@@ -55,11 +55,13 @@ public class Funcionario extends Usuario {
         ListaEsfihas.Exibir();
     }
 
+
     public void CadastrarBebidas(Bebidas bebidas) {
         ListaBebidas.Inserir(bebidas);
+        System.out.println("BEBIDA INSERIDA COM SUCESSO");
     }
 
-    public void DeletarBebidasID(int Id) {
+    public boolean DeletarBebidasID(int Id) {
         return ListaBebidas.BebidasRemoverPorID(Id);
     }
 
@@ -69,10 +71,7 @@ public class Funcionario extends Usuario {
     }
 
     public void Login(String username, String senha) {
-        System.out.println(username);
-        System.out.println(senha);
         if (senha.equals("admin") && username.equals("admin")) {
-            System.out.println("Permissão de admin logada");
             this.permission = 1;
         } else {
             System.out.println("Acesso Negado");
@@ -87,6 +86,18 @@ public class Funcionario extends Usuario {
     public void RemoverItemPedido(int id) {
         ListaPedidos.RemoverPorID(id);
 
+    }
+
+    public Esfihas PegarEsfihaPeloID(int id) {
+        return ListaEsfihas.PegarDadosEsfihaPeloID(id);
+    }
+
+    public Bebidas PegarBebidasID(int id) {
+        return ListaBebidas.PegarDadosBebidaPeloID(id);
+    }
+
+    public double CalculoValorTotalPedido(int esfihaID, int bebidasID) {
+        return PegarEsfihaPeloID(esfihaID).getValor() +  PegarBebidasID(bebidasID).getValor();
     }
 
 }

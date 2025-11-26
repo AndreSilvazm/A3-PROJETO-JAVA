@@ -36,6 +36,7 @@ public class ArrayEsfihas implements InterfaceArrayEsfiha{
     @Override
     public void Exibir() {
         for (int i = 0; i < contador; i++) {
+            System.out.println(lista[i].getId());
             System.out.println(lista[i].getSabor());
             System.out.println(lista[i].getDescricao());
             System.out.println(lista[i].getPreco());
@@ -86,6 +87,12 @@ public class ArrayEsfihas implements InterfaceArrayEsfiha{
         contador--;
 
         return true;
+    }
+
+    public Esfihas PegarDadosEsfihaPeloID(int id){
+        int index = PegarIndexPeloID(id);
+
+        return lista[index];
     }
 
 }
