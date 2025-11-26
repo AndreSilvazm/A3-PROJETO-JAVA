@@ -18,10 +18,16 @@ public class AnhembiEsfiha {
 
             case 2:
                 CRMmanager.CadastrarProduto();
-                CRMmanager.MostrarProdutos();
-                CRMmanager.DeletarProduto();
-                CRMmanager.MostrarProdutos();
+                CRMmanager.MostrarEsfihas();
+                CRMmanager.DeletarEsfiha();
+                CRMmanager.MostrarEsfihas();
+                CRMmanager.MostrarBebidas();
+                CRMmanager.DeletarBebida();
+                CRMmanager.MostrarBebidas();
                 break;
+            case 3:
+                CRMmanager.VerTodosPedidos();
+                CRMmanager.RemoverPedidoPorId();
             default:
                 break;
         }

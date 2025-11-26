@@ -1,7 +1,12 @@
 package Model.Usuario;
 
 import Arrays.Array;
+import Arrays.ArrayPedido;
 import Model.Produto.PrincipalProdutos;
+import Arrays.ArrayEsfihas;
+import Model.Produto.Esfihas;
+import Model.Produto.Bebidas;
+import Arrays.ArrayBebidas;
 
 public class Funcionario extends Usuario {
 
@@ -9,6 +14,9 @@ public class Funcionario extends Usuario {
     private int permission;
 
     Array ListaProdutos = new Array(3);
+    ArrayPedido ListaPedidos = new ArrayPedido(3);
+    ArrayEsfihas ListaEsfihas = new ArrayEsfihas(3);
+    ArrayBebidas ListaBebidas = new ArrayBebidas(3);
 
     public Funcionario() {
     }
@@ -17,6 +25,7 @@ public class Funcionario extends Usuario {
         this.salario = salario;
         this.permission = permission;
     }
+
     public double getSalario() {
         return salario;
     }
@@ -34,16 +43,29 @@ public class Funcionario extends Usuario {
     }
     //EXIBIR PRODUTOS
 
-    public void CadastrarProduto(PrincipalProdutos Produto) {
-        ListaProdutos.Inserir(Produto);
+    public void CadastrarEsfihas(Esfihas esfihas) {
+        ListaEsfihas.Inserir(esfihas);
     }
 
-    public boolean DeletarProdutoPeloID(int Id) {
-        return ListaProdutos.RemoverPorID(Id);
+    public boolean DeletarEsfihaID(int Id) {
+        return ListaEsfihas.RemoverPorID(Id);
     }
 
-    public void ExibirProdutos() {
-        ListaProdutos.Exibir();
+    public void ExibirEsfihas() {
+        ListaEsfihas.Exibir();
+    }
+
+    public void CadastrarBebidas(Bebidas bebidas) {
+        ListaBebidas.Inserir(bebidas);
+    }
+
+    public void DeletarBebidasID(int Id) {
+        return ListaBebidas.BebidasRemoverPorID(Id);
+    }
+
+    public void ExibirBebidas() {
+        ListaBebidas.Exibir();
+
     }
 
     public void Login(String username, String senha) {
@@ -56,4 +78,15 @@ public class Funcionario extends Usuario {
             System.out.println("Acesso Negado");
         }
     }
+
+    public void VerTodosOsPedidos() {
+        ListaPedidos.Exibir();
+
+    }
+
+    public void RemoverItemPedido(int id) {
+        ListaPedidos.RemoverPorID(id);
+
+    }
+
 }
