@@ -67,8 +67,8 @@ public abstract class PrincipalProdutos {
         return preco;
     }
 
-    public void setPreco(double preço) {
-        this.preco = preço;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     public boolean isCombo() {

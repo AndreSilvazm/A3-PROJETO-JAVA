@@ -1,21 +1,22 @@
 package Arrays;
 
-import Model.Produto.PrincipalProdutos;
+import Model.Pedido.Pedido;
 
-public class Array implements Arrays {
-    private PrincipalProdutos[] lista;
+public class ArrayPedido implements ArrayPedidoInterface {
+
+    private Pedido[] lista;
     private int contador;
-    private PrincipalProdutos[] NovoArray;
+    private Pedido[] NovoArray;
     private int tamanho;
 
-    public Array(int tamanho) {
-        this.lista = new PrincipalProdutos[tamanho];
+    public ArrayPedido(int tamanho) {
+        this.lista = new Pedido[tamanho];
         this.contador = 0;
         this.tamanho = tamanho;
     }
 
     @Override
-    public void Inserir(PrincipalProdutos produto) {
+    public void Inserir(Pedido produto) {
 
         //ANTES DE QUALQUER NOVA INTERAÇÃO VERIFICAR SE O ARRAY ESTÁ CHEIO;
 
@@ -35,16 +36,16 @@ public class Array implements Arrays {
     @Override
     public void Exibir() {
         for (int i = 0; i < contador; i++) {
-            System.out.println(lista[i].getNome());
-            System.out.println(lista[i].getId());
-            System.out.println(lista[i].getDescricao());
-            System.out.println(lista[i].getValor());
+            System.out.println(lista[i].getIdPedido());
+            System.out.println(lista[i].getClienteNome());
+            System.out.println(lista[i].getValorTotal());
+
         }
     }
 
     @Override
-    public PrincipalProdutos[] NovoArray() {
-        this.NovoArray = new PrincipalProdutos[lista.length + 3];
+    public Pedido[] NovoArray() {
+        this.NovoArray = new Pedido[lista.length + 3];
         for (int i = 0; i < contador; i++) {
             NovoArray[i] = lista[i];
         }
@@ -57,7 +58,7 @@ public class Array implements Arrays {
 
     public int PegarIndexPeloID(int id){
         for (int i = 0; i < contador; i++) {
-            if(lista[i].getId() == id){
+            if(lista[i].getIdPedido() == id){
                 return i;
             }
         }
